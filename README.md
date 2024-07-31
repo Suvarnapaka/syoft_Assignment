@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+frontend 
+A frontend application built with React. This project includes a Sign Up page, a Log In page, and a Dashboard page. It demonstrates API integration, form validation, and responsive design.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Sign Up: Users can register with their first name, email, password, and phone number.
+Log In: Registered users can log in using their email and password.
+Dashboard: Logged-in users can view their information on the dashboard.
+Technologies Used
+React: Front-end framework.
+Axios: For making HTTP requests.
+React Router: For routing.
+Local Storage: For storing user information after login.
+Installation
+Clone the repository:
 
-## Available Scripts
 
-In the project directory, you can run:
+Install dependencies:
 
-### `npm start`
+npm start
+Start the development server:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm start
+Project Structure
+src/
+|-- components/
+|   |-- SignUp.js
+|   |-- Login.js
+|   |-- Dashboard.js
+|-- App.js
+|-- index.js
+Usage
+Sign Up
+Navigate to the Sign Up page at /signup.
+Fill in the form with your first name, email, password, and phone number.
+submit the form to register.
+Usage
+Sign Up
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Navigate to the Sign Up page at /signup.
+Fill in the form with your first name, email, password, and phone number.
+Submit the form to register. Log In
+Navigate to the Log In page at /login.
+Enter your registered email and password.
+Submit the form to log in. 4.Upon successful login, you will be redirected to the Dashboard.
+Dashboard
 
-### `npm test`
+After logging in, you will be redirected to the Dashboard at /dashboard.
+The dashboard displays your user information.
+API Endpoints
+User Registration URL: https://syoft.dev/Api/user_registeration/api/user_registeration
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Method: POST
 
-### `npm run build`
+Payload:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+{
+  "user_firstname": "mani",
+  "user_email": "mail@gmail.com",
+  "user_phone": "9876543210",
+  "user_password": "123456",
+  "user_lastname": "ni",
+  "user_city": "Hyderabad",
+  "user_zipcode": "500072"
+}
+User Login URL: https://syoft.dev/Api/userlogin/api/userlogin
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Method: POST
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Payload:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+{
+  "user_email": "mail@gmail.com",
+  "user_password": "123456"
+}
